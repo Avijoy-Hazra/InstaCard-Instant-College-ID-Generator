@@ -8,7 +8,9 @@
     font-size: 20px;
 }
 body{
-    background-color: antiquewhite;
+    /* background-image: url("https://images.unsplash.com/20/cambridge.JPG?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    /* background-size: cover; */
+    background-color: rgb(44, 53, 57);
 }
 .container{
     width: 400px;
@@ -86,4 +88,76 @@ body{
 .sign img{
     width: 50px;
     height: 30px;
+}
+.heading
+{
+    font-size: 20px;
+    width: 150px;
+    margin: auto;
+    font-weight: 700;
+    color: coral;
+    margin-top: 40px;
+}
+.inst{
+    width: 380px;
+    margin: auto;
+    font-weight: 550;
+}
+.std_ad{
+    width: 150px;
+    margin: auto;
+    color: blue;
+    font-weight: 800;
+}
+.std_ad_det{
+    width: 300px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 550;
+}
+.contact{
+    width: 250px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 550;
+    text-align: center;
+}
+.clg_ad{
+    width: 280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.btn_1{
+    background-color: lightseagreen;
+    border-radius: 10px;
+    font-weight: 700;
+    position: absolute;
+    top: 650px;
+    left: 200px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border:2px solid lightseagreen;
+}
+.btn_2{
+    background-color: lightseagreen;
+    border-radius: 10px;
+    font-weight: 700;
+    position: absolute;
+    top: 650px;
+    left: 900px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border:2px solid lightseagreen;
+    
 }

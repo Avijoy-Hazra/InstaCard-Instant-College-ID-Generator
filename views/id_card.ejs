@@ -9,13 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
 </head>
 
 <body>
+    <div class="main">
     <div class="container" id="container">
         <div class="container_header">
-            <div class="header_main">
+            <div class="header_main" style="margin-top: 30px;">
                 <div><img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm29oN9qGi14THfIIoukK6SgcOx8el_448Wd5juzuRwg&"
                         alt="" class="logo"></div>
@@ -82,8 +82,9 @@
         </div>
 
     </div>
+
     <div>
-        <button id="button">Download</button>
+        <button id="button" class="btn_1">Download</button>
         <script>
             $(document).ready(function () {
                 $("#button").click(function () {
@@ -93,8 +94,51 @@
                 })
             })
         </script>
-
     </div>
+    <div class="container" id="back">
+        <div class="heading">
+            INSTRUCTIONS
+        </div>
+        <div class="inst">
+            <ol>
+                <li>Keep this card compulsory with you whenever you are in the campus.This card is not
+                    transferable,maintain it properly.</li>
+                <li>Present this card compulsory for using the library.For any non-compliance of Library rules,your
+                    membership may be withdrawn.</li>
+                <li>Loss of this card must be reported immediately to the nearest Police Station & the institute
+                    Office.A duplicate card will cost Rs.100.00.</li>
+            </ol>
+        </div>
+        <br><br><br>
+        <div class="std_ad">
+            Student's Address:
+        </div>
+        <div class="std_ad_det">
+            <%=address%>
+        </div>
+        <div class="contact">
+            Contact: <%=no%>
+        </div>
+        <div class="clg_ad">
+            <div>243 G .T. Road (N) Liluah,</div>
+            <div style="text-align: center;">Howrah - 711204</div>
+            <div>26549315/17</div>
+            <div>Web: www.mckvie.edu.in</div>
+        </div>
+    </div>
+    <div>
+        <button id="button_2" class="btn_2">Download</button>
+        <script>
+            $(document).ready(function () {
+                $("#button_2").click(function () {
+                    domtoimage.toBlob(document.getElementById('back')).then(function (blob) {
+                        window.saveAs(blob, "back.png");
+                    })
+                })
+            })
+        </script>
+    </div>
+</div>
 </body>
 
 </html>
