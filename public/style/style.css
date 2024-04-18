@@ -1,0 +1,89 @@
+
+.header_main img{
+    width: 80px;
+    height: 80px;
+    border-radius:10px ;
+}
+.header_main{
+    font-size: 20px;
+}
+body{
+    background-color: antiquewhite;
+}
+.container{
+    width: 400px;
+    height: 600px;
+    /* margin: auto; */
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.photo_div img{
+    width: 90px;
+    height: 110px;
+}
+.photo_div{
+    width: 80px;
+    margin: auto;
+}
+.full_name{
+    width: 150px;
+    margin: auto;
+}
+#barcode
+{
+    width: 80px;
+    height: 40px;
+}
+.barcode_div
+{
+    width: 80px;
+    height: 40px;
+    margin: auto;
+}
+.uid_no{
+    width: 80px;
+    margin: auto;
+}
+.int_det{
+    width:250px;
+    margin: auto;
+}
+.dept_name{
+    display: flex;
+    gap: 88px;
+}
+.dob{
+    display: flex;
+    justify-content: space-between;
+}
+.val
+{
+    display: flex;
+    justify-content: space-between;
+}
+.iss{
+    display: flex;
+    justify-content: space-between;
+}
+.blg
+{
+    display: flex;
+    gap: 80px;
+}
+.header_main{
+    display: flex;
+    font-size: 35px;
+    font-weight: 700 ;
+    color: blue;
+}
+.sign
+{
+    position:relative;
+    top:30px ;
+    left: 300px;
+}
+.sign img{
+    width: 50px;
+    height: 30px;
+}

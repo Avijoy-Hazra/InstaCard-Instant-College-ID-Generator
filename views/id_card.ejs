@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="container_header">
+            <div class="header_main">
+                <div><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm29oN9qGi14THfIIoukK6SgcOx8el_448Wd5juzuRwg&"
+                        alt="" class="logo"></div>
+                <div style="display: flex; flex-direction: column;">
+                    <div style="line-height: 36px;">MCKV Institute of &nbsp&nbsp&nbsp&nbsp&nbsp&nbspEngineering
+                    </div>
+                    <div class="header_second" style="font-size: 17px ; color: coral;">A Co-Ed PG Degree Engineering
+                        College</div>
+                </div>
+            </div>
+        </div>
+        <hr style="color: blue; height: 4px; background-color: blue;">
+        <div class="photo_div">
+            <img src="/uploads/<%=img_url%>" alt="student_photo" class="photo">
+        </div>
+        <div class="details">
+            <div class="uid_no">
+                <%=uid%>
+            </div>
+            <div class="barcode_div">
+                <svg id="barcode"></svg>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+                <script>
+                    JsBarcode('#barcode', "<%=uid%>", {displayValue: false});
+                </script>
+            </div>
+            <div style="font-size: 18px; color: blue; font-weight: 550;" class="full_name">
+                <%=fullname.toUpperCase()%>
+            </div>
+            <div class="int_det">
+                <div class="roll_no" style="width: 300px;">
+                    ROLL NO. : <%=rollno.toUpperCase()%>
+                </div>
+                <div class="dept_name">
+                    <div>Department.</div>
+                    <div>: <%=dept.toUpperCase()%>
+                    </div>
+                </div>
+                <div class="dob">
+                    <div>DOB.</div>
+                    <div>: <%=dob%>
+                    </div>
+                </div>
+                <div class="val">
+                    <div>Valid Upto</div>
+                    <div>: <%=validity%>
+                    </div>
+                </div>
+                <div class="blg">
+                    <div>Blood Group.</div>
+                    <div style="color: red;">: <%=bldgrp%>
+                    </div>
+                </div>
+                <div class="iss">
+                    <div>Issue Date</div>
+                    <div>: <%=issdate%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sign">
+            <img src="/images/sign.jpg" alt="sign">
+            <div style="font-size:15px ;">Principal</div>
+        </div>
+
+    </div>
+    <div>
+        <button id="button">Download</button>
+        <script>
+            $(document).ready(function () {
+                $("#button").click(function () {
+                    domtoimage.toBlob(document.getElementById('container')).then(function (blob) {
+                        window.saveAs(blob, "output.png");
+                    })
+                })
+            })
+        </script>
+
+    </div>
+</body>
+
+</html>
