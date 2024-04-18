@@ -27,7 +27,7 @@ const upload = multer({ storage });
 app.post("/submit", upload.single("photo"), (req, res) => {
   //console.log(req.body);
   //console.log(req.file);
-  let {fullname,rollno,dept,dob,validity,bldgrp,issdate,address,uid}=req.body;
+  let {fullname,rollno,dept,dob,validity,bldgrp,issdate,address,uid,no}=req.body;
   let img_url=req.file.filename;
   //console.log(img_url);
   //details.push({fullname,rollno,dob,validity,bldgrp,issdate,address});
@@ -35,5 +35,5 @@ app.post("/submit", upload.single("photo"), (req, res) => {
   // jsBarcode(canvas,req.body.uid,{
   //   lineColor:"#000"
   // });
-  res.render("id_card",{fullname,rollno,dept,dob,validity,bldgrp,issdate,address,img_url,uid});
+  res.render("id_card",{fullname,rollno,dept,dob,validity,bldgrp,issdate,address,img_url,uid,no});
 });
