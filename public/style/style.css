@@ -1,127 +1,115 @@
 
 .header_main img{
-    width: 80px;
-    height: 80px;
+    width: 15px;
+    height: 15px;
     border-radius:10px ;
 }
 .header_main{
-    font-size: 20px;
+    font-size: 10px;
 }
 body{
-    /* background-image: url("https://images.unsplash.com/20/cambridge.JPG?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
-    /* background-size: cover; */
     background-color: rgb(44, 53, 57);
 }
 .container{
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    /* height: 600px; */
     /* margin: auto; */
+    aspect-ratio: 1/1.58;
     background-color: white;
     border-radius: 10px;
     border: 2px solid black;
 }
 .photo_div img{
-    width: 90px;
-    height: 110px;
+    width: 80px;
+    height: 100px;
 }
 .photo_div{
     width: 80px;
     margin: auto;
 }
 .full_name{
+    padding-top: 10px;
     width: 150px;
     margin: auto;
-}
-#barcode
-{
-    width: 80px;
-    height: 40px;
+    text-align: center;
 }
 .barcode_div
 {
-    width: 80px;
-    height: 40px;
-    margin: auto;
+    width: 150px;
+    height: 50px;
+    margin:  auto;
+    margin-bottom:10px;
+}
+#barcode{
+    width: 150px;
+    height: 50px;
 }
 .uid_no{
-    width: 80px;
+    display: flex;
+    width: 200px;
     margin: auto;
+    gap: 70px;
 }
 .int_det{
-    width:250px;
-    margin: auto;
+    width:200px;
+    margin-left:20px ;
 }
 .dept_name{
     display: flex;
-    gap: 88px;
+    gap: 45px;
 }
-.dob{
-    display: flex;
-    justify-content: space-between;
-}
-.val
-{
-    display: flex;
-    justify-content: space-between;
-}
-.iss{
-    display: flex;
-    justify-content: space-between;
-}
+
 .blg
 {
     display: flex;
-    gap: 80px;
+    gap: 35px;
 }
 .header_main{
     display: flex;
-    font-size: 35px;
+    font-size: 15px;
     font-weight: 700 ;
     color: blue;
 }
-.sign
+.sign img
 {
+    
     position:relative;
-    top:30px ;
-    left: 300px;
-}
-.sign img{
+    top:60px ;
+    left: 210px;
     width: 50px;
     height: 30px;
-}
+} 
 .heading
 {
-    font-size: 20px;
-    width: 150px;
+    font-size: 15px;
+    width: 100px;
     margin: auto;
-    font-weight: 700;
-    color: coral;
-    margin-top: 40px;
+    font-weight: 500;
+    margin-top: 20px;
 }
 .inst{
-    width: 380px;
+    font-size:15px;
+    width: 250px;
     margin: auto;
-    font-weight: 550;
+    font-weight: 500;
 }
 .std_ad{
-    width: 150px;
-    margin: auto;
-    color: blue;
-    font-weight: 800;
+    width: 200px;
+    margin-left:20px;
+    font-weight: 500;
 }
 .std_ad_det{
-    width: 300px;
-    margin: auto;
-    font-size: 18px;
-    font-weight: 550;
+    width: 200px;
+    margin-left:15px;
+    font-size: 15px;
+    font-weight: 500;
     text-align: center;
 }
 .contact{
-    width: 250px;
-    margin: auto;
-    font-size: 18px;
-    font-weight: 550;
-    text-align: center;
+    width: 200px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
 }
 .clg_ad{
     width: 280px;
@@ -141,9 +129,6 @@ body{
     background-color: lightseagreen;
     border-radius: 10px;
     font-weight: 700;
-    /* position: absolute;
-    top: 650px;
-    left: 200px; */
     width: 100px;
     height: 40px;
     color: white;
@@ -153,12 +138,26 @@ body{
     background-color: lightseagreen;
     border-radius: 10px;
     font-weight: 700;
-    /* position: absolute;
-    top: 650px;
-    left: 900px; */
+   
     width: 100px;
     height: 40px;
     color: white;
     border:2px solid lightseagreen;
     
+}
+.designation{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+.sign_write{
+    position: relative;
+    top: 60px;
+    left: 80px;
+}
+.emp_sign{
+    width: 200px;
+    position: relative;
+    top: 50px;
+    left: 20px;
 }

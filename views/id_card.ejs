@@ -19,70 +19,59 @@
     <div class="main">
         <div class="container" id="container">
             <div class="container_header">
-                <div class="header_main" style="margin-top: 30px;">
-                    <div><img
+                <div class="header_main" style="margin-top: 10px;margin-left: 8px;">
+                    <div>
+                        <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm29oN9qGi14THfIIoukK6SgcOx8el_448Wd5juzuRwg&"
-                            alt="" class="logo"></div>
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="line-height: 36px;">MCKV Institute of &nbsp&nbsp&nbsp&nbsp&nbsp&nbspEngineering
-                        </div>
-                        <div class="header_second" style="font-size: 17px ; color: coral;">A Co-Ed PG Degree Engineering
-                            College</div>
+                            alt="" class="logo">
+                    </div>
+                    <div>
+                        <div>MCKV INSTITUTE OF ENGINEERING</div>
                     </div>
                 </div>
             </div>
-            <hr style="color: blue; height: 4px; background-color: blue;">
+            <div class="header_second" style="font-size: 10px ; color: blue;width: 250px;margin: auto;">243, G.T.Road(N),Liluah,Howrah-711204, P-26549315/17</div>
+            <div style="font-size: 10px;color: blue;margin: auto;width:200px">E:mckvie@vsnl.net &nbsp&nbspW: www.mckvie.edu.in</div>
+            <hr style="color: blue; height: 2px; background-color: blue;width: 275px;">
             <div class="photo_div">
                 <img src="/uploads/<%=img_url%>" alt="student_photo" class="photo">
             </div>
             <div class="details">
-                <div class="uid_no">
-                    <%=uid%>
+                <div style="font-size: 18px; font-weight: 550;" class="full_name">
+                    <%=fullname.toUpperCase()%>
                 </div>
                 <div class="barcode_div">
                     <svg id="barcode"></svg>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
                     <script>
-                        JsBarcode('#barcode', "<%=uid%>", {displayValue: false});
+                        JsBarcode('#barcode', "<%=uid%>", {displayValue: false,width:5,height:50});
                     </script>
                 </div>
-                <div style="font-size: 18px; color: blue; font-weight: 550;" class="full_name">
-                    <%=fullname.toUpperCase()%>
-                </div>
+                
                 <div class="int_det">
-                    <div class="roll_no" style="width: 300px;">
-                        ROLL NO. : <%=rollno.toUpperCase()%>
+                    <div class="uid_no">
+                        <div>Emp ID.:</div>
+                        <div><%=uid%></div>
                     </div>
                     <div class="dept_name">
-                        <div>Department.</div>
-                        <div>: <%=dept.toUpperCase()%>
+                        <div>Department.:</div>
+                        <div><%=dept.toUpperCase()%>
                         </div>
                     </div>
-                    <div class="dob">
-                        <div>DOB.</div>
-                        <div>: <%=dob%>
-                        </div>
-                    </div>
-                    <div class="val">
-                        <div>Valid Upto</div>
-                        <div>: <%=validity%>
-                        </div>
+                    <div class="designation">
+                        <div>Designation.:</div>
+                        <div><%=desg%></div>
                     </div>
                     <div class="blg">
-                        <div>Blood Group.</div>
-                        <div style="color: red;">: <%=bldgrp%>
-                        </div>
-                    </div>
-                    <div class="iss">
-                        <div>Issue Date</div>
-                        <div>: <%=issdate%>
+                        <div>Blood Group.:</div>
+                        <div style="color: red;"><%=bldgrp%>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="sign">
                 <img src="/images/sign.jpg" alt="sign">
-                <div style="font-size:15px ;">Principal</div>
+                <div style="font-size:15px;" class="sign_write">Principal/Authorised Signatory</div>
             </div>
 
         </div>
@@ -93,18 +82,15 @@
                 INSTRUCTIONS
             </div>
             <div class="inst">
-                <ol>
-                    <li>Keep this card compulsory with you whenever you are in the campus.This card is not
-                        transferable,maintain it properly.</li>
-                    <li>Present this card compulsory for using the library.For any non-compliance of Library rules,your
-                        membership may be withdrawn.</li>
-                    <li>Loss of this card must be reported immediately to the nearest Police Station & the institute
-                        Office.A duplicate card will cost Rs.100.00.</li>
+                <ol style="padding: 0px;">
+                    <li>This Identity Card cum Attendance must be carried/ displayed while on duty and produced on demand.</li>
+                    <li>Lost of ths card must be immediately reported to the police and to the college administration in writing for obtaining a new card.</li>
+                    <li>Replacement of card will be on actual cost basis and on production of the policy diary.</li>
+                    <li>This card should be returned to the college on cessation of the Employment.</li>
                 </ol>
             </div>
-            <br><br><br>
             <div class="std_ad">
-                Student's Address:
+                Residential Address:
             </div>
             <div class="std_ad_det">
                 <%=address%>
@@ -112,20 +98,10 @@
             <div class="contact">
                 Contact: <%=no%>
             </div>
-            <div class="clg_ad">
-                <div>243 G .T. Road (N) Liluah,</div>
-                <div style="text-align: center;">Howrah - 711204</div>
-                <div>26549315/17</div>
-                <div>Web: www.mckvie.edu.in</div>
-            </div>
+            <div class="emp_sign">Signature of the cardholder</div>
         </div>
 
     </div>
-    <!-- <div style="bottom: 0px; position: absolute; left: 400px;">
-    <form action="/edit" method="post">
-        <button type="submit">Edit</button>
-    </form>
-</div> -->
 <div style="display: flex; justify-content: space-around; margin-top: 20px;">
     <div>
         <button id="button" class="btn_1"><i class="fa-solid fa-download"></i> Download</button>
@@ -133,7 +109,7 @@
             $(document).ready(function () {
                 $("#button").click(function () {
                     domtoimage.toBlob(document.getElementById('container')).then(function (blob) {
-                        window.saveAs(blob, "output.png");
+                        window.saveAs(blob, "front.jpg");
                     })
                 })
             })
@@ -145,7 +121,7 @@
             $(document).ready(function () {
                 $("#button_2").click(function () {
                     domtoimage.toBlob(document.getElementById('back')).then(function (blob) {
-                        window.saveAs(blob, "back.png");
+                        window.saveAs(blob, "back.jpg");
                     })
                 })
             })

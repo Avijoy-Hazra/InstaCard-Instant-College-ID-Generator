@@ -13,7 +13,12 @@
     "canvas": "^2.11.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
     "jsbarcode": "^3.11.6",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.6",
+    "spread_sheet": "^2.2.1",
+    "xlsx": "^0.18.5"
   }
 }
